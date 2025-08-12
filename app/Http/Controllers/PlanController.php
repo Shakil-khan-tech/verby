@@ -60,7 +60,11 @@ class PlanController extends Controller
     $devices = Device::available()->get();
 
     // Count only valid employees based on contract logic
-    $total_employees = Employee::withAllContractsSigned()
+    $empQuery = Employee::query();
+    if (config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+      $empQuery = $empQuery->withAllContractsSigned();
+    }
+    $total_employees = $empQuery
       ->where('function', '!=', 6)
       ->count();
 
@@ -189,40 +193,43 @@ class PlanController extends Controller
     $to = Carbon::parse($date)->lastOfMonth();
     $period = CarbonPeriod::create($from, $to);
 
-    $data = $device->employees()
-      ->where(function ($query) {
-        $query->where('employee_type', 0)
-          ->orWhere(function ($q) {
-            $q->where('employee_type', 1)
-              ->whereRaw('
-                            (SELECT COUNT(*) FROM contracts) = (
-                                SELECT COUNT(*) 
-                                FROM employee_contracts 
-                                WHERE employee_contracts.employee_id = employees.id 
-                                AND is_sign = 1
-                            )');
-          });
-      })
-      ->inDevices($devices_arr)
-      ->where(function ($q) use ($from, $to, $inactive_employees) {
-        if ($inactive_employees) {
-          $q->inactiveBetween($from, $to);
-        } else {
-          $q->activeBetween($from, $to);
-        }
-      })
-      ->with([
-        'plans' => function ($q) use ($from, $to, $device) {
-          $q->whereBetween('dita', [$from, $to])
-            ->where('device_id', $device->id);
-        },
-        'vacations' => function ($q) use ($from, $to) {
-          $q->whereBetween('data', [$from, $to]);
-        }
-      ])
-      ->orderBy('function')
-      ->orderBy('name')
-      ->get();
+    $empRel = $device->employees();
+      if (config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+        $empRel = $empRel->where(function ($query) {
+          $query->where('employee_type', 0)
+            ->orWhere(function ($q) {
+              $q->where('employee_type', 1)
+                ->whereRaw('
+                              (SELECT COUNT(*) FROM contracts) = (
+                                  SELECT COUNT(*) 
+                                  FROM employee_contracts 
+                                  WHERE employee_contracts.employee_id = employees.id 
+                                  AND is_sign = 1
+                              )');
+            });
+        });
+      }
+      $data = $empRel
+        ->inDevices($devices_arr)
+        ->where(function ($q) use ($from, $to, $inactive_employees) {
+          if ($inactive_employees) {
+            $q->inactiveBetween($from, $to);
+          } else {
+            $q->activeBetween($from, $to);
+          }
+        })
+        ->with([
+          'plans' => function ($q) use ($from, $to, $device) {
+            $q->whereBetween('dita', [$from, $to])
+              ->where('device_id', $device->id);
+          },
+          'vacations' => function ($q) use ($from, $to) {
+            $q->whereBetween('data', [$from, $to]);
+          }
+        ])
+        ->orderBy('function')
+        ->orderBy('name')
+        ->get();
 
     $holidays = Holiday::all();
     $today = date('Y-m-d');

@@ -60,9 +60,11 @@ class CalendarController extends Controller
 
     $devices = Device::available()->with('validEmployees')->get();
 
-    $total_employees = Employee::withAllContractsSigned()
-      ->where('function', '!=', 6)
-      ->count();
+    $query = Employee::query();
+    if (config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+      $query = $query->withAllContractsSigned();
+    }
+    $total_employees = $query->where('function', '!=', 6)->count();
 
     $last_activities = Device::select('devices.id')
       ->selectRaw('MAX(records.updated_at) updated_at')
@@ -178,27 +180,30 @@ class CalendarController extends Controller
       ->pluck('employee_id');
 
     // Filter employees
-    $data = Employee::whereIn('id', $employeeIds)
-      ->where(function ($query) use ($allContractIds) {
-        $query->where('employee_type', 0) // old employees
-          ->orWhere(function ($q) use ($allContractIds) {
-            $q->where('employee_type', 1)
-              ->whereRaw('
-                            (SELECT COUNT(*) FROM contracts) = (
-                                SELECT COUNT(*) 
-                                FROM employee_contracts 
-                                WHERE employee_contracts.employee_id = employees.id 
-                                AND is_sign = 1
-                            )');
-          });
-      })
-      ->activeBetween($from, $to)
-      ->with(['calendars' => function ($q) use ($from, $to) {
-        $q->whereBetween('date', [$from, $to]);
-      }])
-      ->orderBy('function')
-      ->orderBy('name')
-      ->get();
+    $empQuery = Employee::whereIn('id', $employeeIds);
+      if (config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+        $empQuery = $empQuery->where(function ($query) use ($allContractIds) {
+          $query->where('employee_type', 0)
+            ->orWhere(function ($q) use ($allContractIds) {
+              $q->where('employee_type', 1)
+                ->whereRaw('
+                              (SELECT COUNT(*) FROM contracts) = (
+                                  SELECT COUNT(*) 
+                                  FROM employee_contracts 
+                                  WHERE employee_contracts.employee_id = employees.id 
+                                  AND is_sign = 1
+                              )');
+            });
+        });
+      }
+      $data = $empQuery
+        ->activeBetween($from, $to)
+        ->with(['calendars' => function ($q) use ($from, $to) {
+          $q->whereBetween('date', [$from, $to]);
+        }])
+        ->orderBy('function')
+        ->orderBy('name')
+        ->get();
 
     return view('pages.calendars.show', compact(
       'page_title',
