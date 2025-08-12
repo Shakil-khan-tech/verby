@@ -1,0 +1,733 @@
+$ pdftk fixed.pdf dump_data_fields
+---
+FieldType: Text
+FieldName: Zivilstand
+FieldNameAlt: Zivilstand
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Eingangsdatum
+FieldNameAlt: Eingangsdatum
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Pers-Nr
+FieldNameAlt: Pers_nr
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: AHV-Nr
+FieldNameAlt: AHV-Nr
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: PLZ_Wohnort_Strasse
+FieldNameAlt: PLZ_Wohnort_Strasse
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Geburtsdatum
+FieldNameAlt: Geburtsdatum
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Name_und_Vorname
+FieldNameAlt: Name_und_Vorname
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Monat
+FieldNameAlt: Monat
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Jahr
+FieldNameAlt: Jahr
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ausge&#252;bte_T&#228;tigkeit
+FieldNameAlt: ausge&#252;bte_T&#228;tigkeit
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_12
+FieldNameAlt: 1_12
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_13
+FieldNameAlt: 1_13
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_14
+FieldNameAlt: 1_14
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_15
+FieldNameAlt: 1_15
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_16
+FieldNameAlt: 1_16
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_31
+FieldNameAlt: 1_1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_30
+FieldNameAlt: 1_30
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_29
+FieldNameAlt: 1_29
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_28
+FieldNameAlt: 1_28
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_27
+FieldNameAlt: 1_1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_26
+FieldNameAlt: 1_26
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_25
+FieldNameAlt: 1_25
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_24
+FieldNameAlt: 1_24
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_23
+FieldNameAlt: 1_23
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_22
+FieldNameAlt: 1_22
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_21
+FieldNameAlt: 1_21
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_20
+FieldNameAlt: 1_20
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_19
+FieldNameAlt: 1_19
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_18
+FieldNameAlt: 1_18
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_17
+FieldNameAlt: 1_17
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 3_w&#246;chentliche_Arbeitszeit_Std
+FieldNameAlt: w&#246;chentliche_Arbeitszeit_Std
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 4_w&#246;chentliche_Arbeitszeit_Betrieb_Std
+FieldNameAlt: 4_w&#246;chentliche_Arbeitszeit_Betrieb_Std
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 5_GAV
+FieldNameAlt: 5_GAV
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 6_Mehr-Std_pro_Tag
+FieldNameAlt: 6_Mehr-Std_pro_Tag
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 6_Mehr-Std_pro_Woche
+FieldNameAlt: 6_Mehr-Std_pro_Woche
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 6_Mehr-Std_pro_Monat
+FieldNameAlt: 6_Mehr-Std_pro_Monat
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 7_Begr&#252;ndung_Ablehung_Arbeitsangebot1
+FieldNameAlt: 7_Begr&#252;ndung_Ablehung_Arbeitsangebot1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 7_Begr&#252;ndung_Ablehung_Arbeitsangebot2
+FieldNameAlt: 7_Begr&#252;ndung_Ablehung_Arbeitsangebot2
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 8_AHV-pflichtiger_Bruttlohn_Std
+FieldNameAlt: 8_AHV-pflichtiger_Bruttlohn_Std
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 8_AHV-pflichtiger_Bruttlohn_Monat
+FieldNameAlt: 8_AHV-pflichtiger_Bruttlohn_Monat
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 9_AHV-pflichtiger_Bruttolohn_Std
+FieldNameAlt: 9_AHV-pflichtiger_Bruttolohn_Std
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 9_AHV-pflichtiger_Bruttolohn_&#224;_CHF
+FieldNameAlt: 9_AHV-pflichtiger_Bruttolohn_&#224;_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 9_AHV-pflichtiger_Bruttolohn_gleich_CHF
+FieldNameAlt: 9_AHV-pflichtiger_Bruttolohn_gleich_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_andere_Lohnbestandteile_welche
+FieldNameAlt: 10_andere_Lohnbestandteile_welche
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_Feiertagsentsch&#228;digung_%
+FieldNameAlt: 10_Feiertagsentsch&#228;digung_%
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_Ferienentsch&#228;digung_%
+FieldNameAlt: 10_Ferienentsch&#228;digung_%
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_13_Monatslohn_Gratifikation_%
+FieldNameAlt: 10_13_Monatslohn_Gratifikation_%
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_andere_Lohnbestandteile_%
+FieldNameAlt: 10_andere_Lohnbestandteile_%
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_Grundlohn_CHF
+FieldNameAlt: 10_Grundlohn_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_Feiertagsentsch&#228;digung_CHF
+FieldNameAlt: 10_Feiertagsentsch&#228;digung_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_Ferienentsch&#228;digung_CHF
+FieldNameAlt: 10_Ferienentsch&#228;digung_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_13_Monatslohn_Gratifikation_CHF
+FieldNameAlt: 10_13_Monatslohn_Gratifikation_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 10_andere_Lohnbestandteile_CHF
+FieldNameAlt: 10_andere_Lohnbestandteile_CHF
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 11_13_Monatslohn_Gratifikation_wird_ausbezahlt_am
+FieldNameAlt: 11_13_Monatslohn_Gratifikation_wird_ausbezahlt_am
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 11_mit_%
+FieldNameAlt: 11_mit_%
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 12_Name_BVG_Versicherers
+FieldNameAlt: 12_Name_BVG_Versicherers
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 13_AHV-Ausgleichskasse
+FieldNameAlt: 13_AHV-Ausgleichskasse
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 14_Anzahl_Kinderzulagen
+FieldNameAlt: 14_Anzahl_Kinderzulagen
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 14_Anzahl_Ausbildungszulagen
+FieldNameAlt: 14_Anzahl_Ausbildungszulagen
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 14_Begr&#252;ndung_Warum_nicht1
+FieldNameAlt: 14_Begr&#252;ndung_Warum_nicht1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 14_Begr&#252;ndung_Warum_nicht2
+FieldNameAlt: 14_Begr&#252;ndung_Warum_nicht2
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 14_Begr&#252;ndung_Warum_nicht3
+FieldNameAlt: 14_Begr&#252;ndung_Warum_nicht3
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 15_voraussichtlich_bis
+FieldNameAlt: 15_voraussichtlich_bis
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 15_wer_hat_gek&#252;ndigt
+FieldNameAlt: 15_wer_hat_gek&#252;ndigt
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 15_wann
+FieldNameAlt: 15_wann
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 15_auf_welchen_Zeitpunkt
+FieldNameAlt: 15_auf_welchen_Zeitpunkt
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 16_Grund_Vertragsaufl&#246;sung1
+FieldNameAlt: 16_Grund_Vertragsaufl&#246;sung1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 16_Grund_Vertragsaufl&#246;sung2
+FieldNameAlt: 16_Grund_Vertragsaufl&#246;sung2
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 16_Grund_Vertragsaufl&#246;sung3
+FieldNameAlt: 16_Grund_Vertragsaufl&#246;sung3
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 18_Bruttoeinkommen
+FieldNameAlt: 18_Bruttoeinkommen
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 18_Material-Warenkosten
+FieldNameAlt: 18_Material-Warenkosten
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 18_Zwischentotal
+FieldNameAlt: 18_Zwischentotal
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 18_Pauschalabzug_20_%
+FieldNameAlt: 18_Pauschalabzug_20_%
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 18_anrechenbarer_Zwischenverdienst
+FieldNameAlt: 18_anrechenbarer_Zwischenverdienst
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Ort_Datum
+FieldNameAlt: Ort_Datum
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Tel_Nr
+FieldNameAlt: Tel_nr
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: BUR-Nr
+FieldNameAlt: BUR-Nr
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Branchen_Code
+FieldNameAlt: Branchen_Code
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: vollst&#228;ndige_Adresse_Arbeitgeber
+FieldNameAlt: vollst&#228;ndige_Adresse_Arbeitgeber
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: 3_w&#246;chentliche_Arbeitszeit_vereinbart_ja
+FieldNameAlt: 3_w&#246;chentliche_Arbeitszeit_vereinbart_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 3_w&#246;chentliche_Arbeitszeit_vereinbart_nein
+FieldNameAlt: 3_w&#246;chentliche_Arbeitszeit_vereinbart_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 2_schriftlicher_Arbeitsvertrag_nein
+FieldNameAlt: 2_schriftlicher_Arbeitsvertrag_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 2_schriftlicher_Arbeitsvertrag_ja
+FieldNameAlt: 2_schriftlicher_Arbeitsvertrag_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 6_mehr_Arbeitsstunden_angeboten_nein
+FieldNameAlt: 6_mehr_Arbeitsstunden_angeboten_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 5_Gesamtarbeitsvertrag_nein
+FieldNameAlt: 5_Gesamtarbeitsvertrag_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 5_Gesamtarbeitsvertrag_ja
+FieldNameAlt: 5_Gesamtarbeitsvertrag_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 6_mehr_Arbeitsstunden_angeboten_ja
+FieldNameAlt: 6_mehr_Arbeitsstunden_angeboten_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 10_Feiertagsentsch&#228;digung
+FieldNameAlt: 10_Feiertagsentsch&#228;digung
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 10_Ferienentsch&#228;digung
+FieldNameAlt: 10_Ferienentsch&#228;digung
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 10_13_monatslohn_Gratifikation
+FieldNameAlt: 10_13_monatslohn_Gratifikation
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 10_andere_Lohnbestandteile
+FieldNameAlt: 10_andere_Lohnbestandteile
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 10_Grundlohn
+FieldNameAlt: 10_Grundlohn
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 11_13_Monatslohn_Gratifikation_nicht_vereinbart
+FieldNameAlt: 11_13_Monatslohn_Gratifikation_nicht_vereinbart
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 11_13_Monatslohn_Gratifikation_wird_noch_ausbezahlt
+FieldNameAlt: 11_13_Monatslohn_Gratifikation_wird_noch_ausbezahlt
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 12_BVG-Beitr&#228;ge_ja
+FieldNameAlt: 12_BVG-Beitr&#228;ge_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 12_BVG-Beitr&#228;ge_nein
+FieldNameAlt: 12_BVG-Beitr&#228;ge_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 14_Kinder_Ausbildungszulagen_ja
+FieldNameAlt: 14_Kinder_Ausbildungszulagen_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 14_Kinder_Ausbildungszulagen_nein
+FieldNameAlt: 14_Kinder_Ausbildungszulagen_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 15_Weiterbesch&#228;ftigung_unbestimmte-Zeit_ja
+FieldNameAlt: 15_Weiterbesch&#228;ftigung_unbestimmte-Zeit_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 15_Weiterbesch&#228;ftigung_voraussichtlich_bis_ja
+FieldNameAlt: 15_Weiterbesch&#228;ftigung_voraussichtlich_bis_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 15_Weiterbesch&#228;ftigung_nein
+FieldNameAlt: 15_Weiterbesch&#228;ftigung_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 17_am_Betrieb_beteiligt_ja
+FieldNameAlt: 17_am_Betrieb_beteiligt_ja
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: 17_am_Betrieb_beteiligt_nein
+FieldNameAlt: 17_am_Betrieb_beteiligt_nein
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Ja
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: 1_1
+FieldNameAlt: 1_1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_2
+FieldNameAlt: 1_1
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_3
+FieldNameAlt: 1_3
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_4
+FieldNameAlt: 1_4
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_5
+FieldNameAlt: 1_5
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_6
+FieldNameAlt: 1_6
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_8
+FieldNameAlt: 1_8
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_9
+FieldNameAlt: 1_9
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_10
+FieldNameAlt: 1_10
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_11
+FieldNameAlt: 1_11
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1_7
+FieldNameAlt: 1_7
+FieldFlags: 8388608
+FieldJustification: Left

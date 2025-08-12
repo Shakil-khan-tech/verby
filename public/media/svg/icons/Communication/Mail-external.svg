@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24px"
+   height="24px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="Mail-external.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="14.481547"
+     inkscape:cx="14.167925"
+     inkscape:cy="20.710687"
+     inkscape:window-x="-8"
+     inkscape:window-y="-1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Stockholm-icons-/-Navigation-/-Up-right"
+     inkscape:document-rotation="0" />
+  <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">Stockholm-icons / Communication / Mail-locked</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="Stockholm-icons-/-Communication-/-Mail-locked"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <rect
+       id="bound"
+       x="0"
+       y="0"
+       width="24"
+       height="24" />
+    <path
+       d="M12.9835977,18 C12.7263047,14.0909841 9.47412135,11 5.5,11 C4.98630124,11 4.48466491,11.0516454 4,11.1500272 L4,7 C4,5.8954305 4.8954305,5 6,5 L20,5 C21.1045695,5 22,5.8954305 22,7 L22,16 C22,17.1045695 21.1045695,18 20,18 L12.9835977,18 Z M19.1444251,6.83964668 L13,10.1481833 L6.85557487,6.83964668 C6.4908718,6.6432681 6.03602525,6.77972206 5.83964668,7.14442513 C5.6432681,7.5091282 5.77972206,7.96397475 6.14442513,8.16035332 L12.6444251,11.6603533 C12.8664074,11.7798822 13.1335926,11.7798822 13.3555749,11.6603533 L19.8555749,8.16035332 C20.2202779,7.96397475 20.3567319,7.5091282 20.1603533,7.14442513 C19.9639747,6.77972206 19.5091282,6.6432681 19.1444251,6.83964668 Z"
+       id="Combined-Shape"
+       fill="#000000" />
+  </g>
+  <g
+     id="Stockholm-icons-/-Navigation-/-Up-right"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="matrix(0.5367668,0,0,0.5367668,0.23844034,10.838717)">
+    <polygon
+       id="Shape"
+       points="24,0 24,24 0,24 0,0 " />
+    <rect
+       id="Rectangle"
+       fill="#000000"
+       opacity="0.3"
+       transform="rotate(45,11.646447,12.853553)"
+       x="10.646446"
+       y="5.8535533"
+       width="2"
+       height="14"
+       rx="1"
+       style="opacity:1" />
+    <path
+       d="m 8.1109127,8.9038059 c -0.5522848,0 -1,-0.4477152 -1,-1 0,-0.5522847 0.4477152,-1 1,-1 h 8.4852813 c 0.535391,0 0.9758,0.4216767 0.999056,0.9565628 l 0.353554,8.1317283 c 0.02399,0.551763 -0.403856,1.018503 -0.955619,1.042493 -0.551764,0.02399 -1.018504,-0.403855 -1.042494,-0.955619 L 15.638728,8.9038059 Z"
+       id="Path-94"
+       fill="#000000"
+       fill-rule="nonzero" />
+  </g>
+</svg>

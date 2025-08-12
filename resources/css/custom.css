@@ -1,0 +1,341 @@
+.label.label-inline {
+  padding: 0.15rem 0.5rem;
+}
+label {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.label.label-medium-danger {
+  color: #ffffff;
+  background-color: #ff7d8a;
+}
+
+.label.label-green {
+  color: #fff;
+  background-color: #4caf50;
+}
+.label.label-medium-green {
+  color: #fff;
+  background-color: #74b977;
+}
+.label.label-light-green {
+  color: #0a6e0e;
+  background-color: #bde3bf;
+}
+
+input.current {
+  border-color: #2563eb;
+}
+
+.rooms_generated .tagify__input {
+  display: none !important;
+}
+.tagify {
+  min-height: 35px;
+}
+
+.table-xs th, .table-xs td {
+    padding: 0.3rem 0.1rem;
+}
+
+.table-responsive th,
+.table-responsive td {
+  white-space: nowrap;
+}
+
+.rotate-90 {
+  /* transform: rotate(90deg); */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.bg-mili {
+  background-color: #60aeff !important;
+}
+
+.print_only,
+.print_only_as_table {
+  display: none;
+}
+
+.image-input .image-input-wrapper {
+    background-position: center;
+}
+
+#planForm td {
+  position: relative;
+}
+input.inputSymbol {
+  font-size: 0.9rem;
+}
+
+/* fullcalendar fix spaces start */
+.fc-unthemed .fc-day-grid td:not(.fc-axis) {
+  padding: 0 0.5rem;
+}
+.fc-unthemed .fc-day-grid td:not(.fc-axis).fc-event-container {
+  padding: 0 0.5rem;
+}
+.fc-unthemed .fc-event .fc-content, .fc-unthemed .fc-event-dot .fc-content {
+  padding: 0.1rem 0.4rem 0.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fc-unthemed .fc-event .fc-content:before, .fc-unthemed .fc-event-dot .fc-content:before {
+  left: 0.4rem;
+  top: 0.4rem;
+}
+.fc-unthemed .fc-event {
+  cursor: pointer;
+}
+.fc-event {
+  line-height: 1;
+}
+/* fullcalendar fix spaces end */
+
+.bootstrap-timepicker-widget table td input {
+  padding: 1px;
+}
+.bootstrap-timepicker-widget.dropdown-menu {
+  z-index: 2050 !important;
+}
+
+#kt_profile_aside .daterangepicker.show-calendar .ranges {
+  display: none !important;
+}
+
+.kt_subheader .btn {
+  text-transform: capitalize;
+}
+
+.ps > .ps__rail-x,
+.ps > .ps__rail-y {
+  opacity: 0.6;
+}
+
+.scrollit {
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.scrollit.scroll-200 {
+  max-height: 300px;
+}
+
+.scrollit.scroll-300 {
+  max-height: 300px;
+}
+
+.break-any {
+  line-break: anywhere;
+}
+
+/* tag statuses */
+.tagify__tag.status-0::after {
+  content: 'U';
+  font-weight: bold;
+}
+.tagify__tag.status-1::after {
+  content: 'C';
+  font-weight: bold;
+}
+.tagify__tag.status-2::after {
+  content: 'R';
+  font-weight: bold;
+}
+.tagify__tag.status-3::after {
+  content: 'V';
+  font-weight: bold;
+}
+
+.dt_comment.datatable-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.fc .fc-center {
+  text-align: center;
+}
+
+/* select2 */
+.dropdown-menu.show {
+  max-height: 300px !important;
+}
+
+/* fix table header sticky */
+body.card-sticky-on .table-sticky thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+}
+
+body.card-sticky-on .table-sticky thead th {
+  border-bottom: none;
+}
+
+/* below sm */
+@media (max-width: 575px) {
+  .fc-unthemed .fc-day-grid td:not(.fc-axis).fc-event-container {
+    padding: 0;
+  }
+  .fc-unthemed .fc-event .fc-title, .fc-unthemed .fc-event-dot .fc-title,
+  .fc-unthemed .deleteEvent {
+    display: none;
+  }
+  .fc-unthemed .fc-event .fc-content:before, .fc-unthemed .fc-event-dot .fc-content:before {
+    height: 5px;
+    width: 5px;
+    top: 0.3rem;
+    left: 0.3rem;
+  }
+  .fc-unthemed .fc-event .fc-content, .fc-unthemed .fc-event-dot .fc-content {
+    padding-left: 1rem;
+  }
+  .plan-card.card-body {
+    padding: 2rem 0 !important;
+  }
+  .fc-unthemed .fc-day-grid td:not(.fc-axis) {
+    padding: 0;
+  }
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    min-width: 50% !important;
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: 100% !important;
+  }
+
+  .datatable.horizontale .datatable-table {
+    overflow-x: auto !important;
+  }
+}
+/* sm */
+@media (min-width: 576px) {
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    /* min-width: 20% !important; */
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:max-w-smd {
+    max-width: 22rem;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    /* min-width: 20% !important; */
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg,.modal-xl {
+    max-width: 900px;
+  }
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    /* min-width: 20% !important; */
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: 100% !important;
+  }
+  
+}
+
+@media(min-width: 1200px) {
+  .modal-xl {
+      max-width:1180px
+  }
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    /* min-width: 20% !important; */
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .symbol .symbol-badge.symbol-badge-top-middle {
+    top: -5px;
+    left: 25px;
+  }
+}
+
+@media (min-width: 1535px) {
+  .auto_add_rooms input,
+  .auto_add_rooms .input-group-prepend,
+  .auto_add_rooms .bootstrap-select {
+    /* min-width: auto !important; */
+  }
+
+  .auto_add_rooms .input-group-prepend .input-group-text,
+  .auto_add_rooms .auto_add,
+  .auto_add_rooms #btnAutoAdd {
+    width: auto !important;
+  }
+}
+
+@media print {
+  .print_only {
+    display: block;
+  }
+  .print_only_as_table {
+    display: table-row;
+  }
+  .printable .card-toolbar,
+  #kt_quick_user {
+      display: none !important;
+  }
+  .unprint {
+    display: none !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  td.plan_data a.empty {
+    opacity: 0 !important;
+  }
+  th.min-w-35px {
+    min-width: auto !important;
+  }
+  body.card-sticky-on .table-sticky thead {
+    position: unset !important;
+  }
+}

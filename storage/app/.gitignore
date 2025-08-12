@@ -1,0 +1,7 @@
+*
+!public/
+!.gitignore
+!tarifa/
+!tarifa/*
+!pdfs/
+!pdfs/*
