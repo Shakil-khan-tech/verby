@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -23,6 +24,11 @@ return [
     'Deleted' => 'Aktualisiert',
     'Function' => 'Function',
     'Actions' => 'Actions',
+    'Married Status' => 'Married Status',
+    'Single' => 'Single',
+    'Married' => 'Married',
+    'Registration Confirmation' => 'Registration Confirmation',
+
     'edit_details' => 'Edit Details',
     'Delete' => 'Delete',
     'download' => 'Download',
@@ -70,6 +76,11 @@ return [
         'Cleaners' => 'Cleaners',
         'Maintenance' => 'Maintenance',
         'Stewarding' => 'Stewarding',
+        'assistant_housekeeper' => 'Assistant Housekeeper',
+        'allrounder' => 'Allrounder',
+        'late_shift' => 'Late Shift',
+        'night_shift' => 'Night Shift',
+        'office' => 'Office',
     ],
     'validations' => [
         'name' => 'First name is required',

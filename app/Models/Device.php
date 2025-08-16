@@ -99,8 +99,13 @@ class Device extends Model
 
     public function validEmployees()
     {
-        return $this->belongsToMany(Employee::class, 'device_employee', 'device_id', 'employee_id')
-            ->where('function', '!=', 6)
-            ->withAllContractsSigned(); // Custom scope from Employee model
+        $rel = $this->belongsToMany(Employee::class, 'device_employee', 'device_id', 'employee_id')
+            ->where('function', '!=', 6);
+
+        if (config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+            $rel = $rel->withAllContractsSigned();
+        }
+
+        return $rel;
     }
 }

@@ -76,23 +76,27 @@ class EmployeeController extends Controller
 
     $request->validate([
       'name' => 'required',
+      'surname' => ['required','string','max:255'],
       'email' => 'required',
-      // 'phone' => 'required',
       'function' => 'required',
       'PartTime' => 'required',
       'locations' => 'sometimes|required|array',
-      // 'EhChf' => 'required',
-      //'decki250' => 'required',
-      //'decki200' => 'required',
       'BVG' => 'required',
       'start' => 'required',
-      // 'end' => 'required',
       'pin' => 'required',
-      //'additional_income' => 'required',
-      'married_since' => 'required',
+      'married_status' => ['nullable','in:single,married'],
+      'married_since' => ['nullable','date','required_if:married_status,married'],
       'religion' => 'required',
       'children' => 'required',
       'child_allowance' => 'required',
+      'work_permit' => ['nullable', \Illuminate\Validation\Rule::in(['b','l','g','c','s','ch','registration_confirmation','L','B','C','S','CH'])],
+      'work_permit_expiry' => [
+        'nullable','date',
+        \Illuminate\Validation\Rule::requiredIf(function() use ($request) {
+          $wp = $request->input('work_permit');
+          return !empty($wp) && strtolower($wp) !== 'registration_confirmation';
+        }),
+      ],
     ]);
     if ($request->input('additional_income_toggle') === 'yes') {
       $request->validate([
@@ -147,6 +151,7 @@ class EmployeeController extends Controller
     $u->religion = request('religion');
     $u->children = request('children');
     $u->child_allowance = request('child_allowance');
+    $u->married_status = request('married_status');
     $u->work_permit = request('work_permit');
     $u->work_permit_expiry = request('work_permit_expiry');
     $u->employee_type = 1;
@@ -341,17 +346,22 @@ class EmployeeController extends Controller
     if ($request->has('show')) {
       $request->validate([
         'name' => 'required',
+        'surname' => ['required','string','max:255'],
         'gender' => 'required',
-        'maried' => 'required',
         'ORT' => 'required',
         'pin' => 'required',
-        // 'additional_income' => 'required',
-        'married_since' => 'required',
+        'married_status' => ['nullable','in:single,married'],
+        'married_since' => ['nullable','date','required_if:married_status,married'],
         'religion' => 'required',
         'children' => 'required',
-        //'child_allowance' => 'required',
-        'work_permit' => 'required',
-        'work_permit_expiry' => 'required',
+        'work_permit' => ['nullable', \Illuminate\Validation\Rule::in(['b','l','g','c','s','ch','registration_confirmation','L','B','C','S','CH'])],
+        'work_permit_expiry' => [
+          'nullable','date',
+          \Illuminate\Validation\Rule::requiredIf(function() use ($request) {
+            $wp = $request->input('work_permit');
+            return !empty($wp) && strtolower($wp) !== 'registration_confirmation';
+          }),
+        ],
       ]);
 
       if ($request->input('additional_income_toggle') === 'yes') {
@@ -383,6 +393,7 @@ class EmployeeController extends Controller
       $u->married_since = request('married_since');
       $u->religion = request('religion');
       $u->children = request('children');
+      $u->married_status = request('married_status');
       $u->work_permit = request('work_permit');
       $u->work_permit_expiry = request('work_permit_expiry');
 
@@ -395,7 +406,7 @@ class EmployeeController extends Controller
     }
     if ($request->has('overview')) {
       $request->validate([
-        'sage_number' => 'required',
+        'sage_number' => ['nullable','string','max:255'],
         // 'function' => 'required',
         // 'PartTime' => 'required',
         'locations' => 'required|array|min:1',

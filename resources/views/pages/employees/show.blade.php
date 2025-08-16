@@ -143,7 +143,7 @@
                                 </div>
                             </div>
 
-                            {{-- Gender & Married --}}
+                            {{-- Gender & Married Status --}}
                             <div class="row">
                                 <div class="form-group col-xl-6">
                                     <label>{{ __('Gender') }}</label>
@@ -156,13 +156,13 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-xl-6">
-                                    <label>{{ __('Married') }}</label>
-                                    <select name="maried" class="form-control form-control-lg form-control-solid">
+                                    <label>{{ __('Married Status') }}</label>
+                                    <select name="married_status" id="marriedStatus" class="form-control form-control-lg form-control-solid">
                                         <option value=""></option>
-                                        <option value="1" {{ $employee->maried == 1 ? 'selected' : '' }}>
-                                            {{ __('Yes') }}</option>
-                                        <option value="0" {{ $employee->maried == 0 ? 'selected' : '' }}>
-                                            {{ __('No') }}</option>
+                                        <option value="single" {{ ($employee->married_status ?? null) === 'single' ? 'selected' : '' }}>
+                                            {{ __('Single') }}</option>
+                                        <option value="married" {{ ($employee->married_status ?? null) === 'married' ? 'selected' : '' }}>
+                                            {{ __('Married') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -254,7 +254,7 @@
                             </div>
 
                             {{-- Married Since + Religion --}}
-                            <div class="row">
+                            <div class="row" id="marriedSinceRow">
                                 <div class="form-group col-xl-6">
                                     <label>{{ __('Married Since') }}</label>
                                     <input type="date" name="married_since" value="{{ $employee->married_since }}"
@@ -277,20 +277,23 @@
                                 </div>
                                 <div class="form-group col-xl-6">
                                     <label>{{ __('Work Permit') }}</label>
-                                    <select name="work_permit" class="form-control form-control-lg form-control-solid">
+                                    <select name="work_permit" id="workPermit" class="form-control form-control-lg form-control-solid">
                                         <option value=""></option>
                                         @foreach (['L', 'B', 'C', 'S', 'CH'] as $wp)
                                             <option value="{{ $wp }}"
                                                 {{ $employee->work_permit == $wp ? 'selected' : '' }}>{{ $wp }}
                                             </option>
                                         @endforeach
+                                        <option value="registration_confirmation" {{ strtolower((string)$employee->work_permit) === 'registration_confirmation' ? 'selected' : '' }}>
+                                            {{ __('Registration Confirmation') }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
 
                             {{-- Work Permit Expiry + Additional Income --}}
                             <div class="row">
-                                <div class="form-group col-xl-6">
+                                <div class="form-group col-xl-6" id="workPermitExpiryRow">
                                     <label>{{ __('Work Permit Expiration Date') }}</label>
                                     <input type="date" name="work_permit_expiry"
                                         value="{{ $employee->work_permit_expiry }}"
@@ -405,7 +408,7 @@
 {{-- Scripts Section --}}
 @section('scripts')
     {{-- vendors --}}
-
+    
     {{-- page scripts --}}
     <script src="{{ mix('js/pages/_misc/aside.js') }}" type="text/javascript"></script>
     <script src="{{ mix('js/pages/_misc/aside_vacation.js') }}" type="text/javascript"></script>
@@ -414,55 +417,41 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Initialize Select2 for nationality dropdown
             $('.select2-nationality').select2({
                 allowClear: true,
                 templateResult: formatCountry,
                 templateSelection: formatCountrySelection,
                 width: '100%'
             });
-
-            // Format the displayed option
             function formatCountry(country) {
                 if (!country.id) {
                     return country.text;
                 }
-                var $country = $(
-                    '<span>' + country.text + '</span>'
-                );
+                var $country = $('<span>' + country.text + '</span>');
                 return $country;
             }
-
-            // Format the selected option
             function formatCountrySelection(country) {
                 return country.text;
             }
         });
         document.addEventListener('DOMContentLoaded', function() {
             const taxToggle = document.getElementById('taxToggle');
-
             if (taxToggle) {
-                // Handle change event
                 taxToggle.addEventListener('change', function() {
                     const container = document.getElementById('taxInputContainer');
                     const taxInput = container.querySelector('input[name="TAX"]');
-
                     container.style.display = this.value === 'yes' ? 'block' : 'none';
                     if (this.value === 'no') {
                         taxInput.value = '';
                     }
                 });
-
-                // Initialize based on current value
                 taxToggle.dispatchEvent(new Event('change'));
             }
         });
-
         document.addEventListener("DOMContentLoaded", function() {
             const incomeToggle = document.getElementById("additionalIncomeToggle");
             const incomeAmountContainer = document.getElementById("additionalIncomeAmountContainer");
             const incomeInput = incomeAmountContainer?.querySelector('input[name="additional_income"]');
-
             if (incomeToggle && incomeAmountContainer) {
                 incomeToggle.addEventListener("change", function() {
                     if (this.value === "yes") {
@@ -472,10 +461,30 @@
                         if (incomeInput) incomeInput.value = '';
                     }
                 });
-
-                // Trigger change on load to ensure correct visibility
                 incomeToggle.dispatchEvent(new Event("change"));
             }
         });
+        (function(){
+          function toggleMarriedSince(){
+            var sel = document.getElementById('marriedStatus');
+            var row = document.getElementById('marriedSinceRow');
+            if(!sel || !row) return;
+            var v = sel.value || '';
+            row.style.display = (v === 'married') ? '' : 'none';
+          }
+          function toggleWorkPermitExpiry(){
+            var sel = document.getElementById('workPermit');
+            var row = document.getElementById('workPermitExpiryRow');
+            if(!sel || !row) return;
+            var v = (sel.value || '').toLowerCase();
+            row.style.display = (v && v !== 'registration_confirmation') ? '' : 'none';
+          }
+          document.addEventListener('change', function(e){
+            if(e.target && e.target.id === 'marriedStatus'){ toggleMarriedSince(); }
+            if(e.target && e.target.id === 'workPermit'){ toggleWorkPermitExpiry(); }
+          });
+          toggleMarriedSince();
+          toggleWorkPermitExpiry();
+        })();
     </script>
 @endsection

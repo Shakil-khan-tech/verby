@@ -210,7 +210,7 @@
                                                     <div class="form-group">
                                                         <label>{{ __('Last Name') }}</label>
                                                         <input class="form-control form-control-lg form-control-solid"
-                                                            type="text" name="surname"
+                                                            type="text" name="surname" required
                                                             placeholder="{{ __('Last Name') }}"
                                                             value="{{ old('surname') }}" />
                                                     </div>
@@ -267,7 +267,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Gender & Married -->
+                                            <!-- Gender & Married Status -->
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
@@ -286,16 +286,14 @@
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label>{{ __('Married') }}</label>
+                                                        <label>{{ __('Married Status') }}</label>
                                                         <select class="form-control form-control-lg form-control-solid"
-                                                            name="maried">
+                                                            name="married_status" id="marriedStatus">
                                                             <option value=""></option>
-                                                            <option value="1"
-                                                                {{ old('maried') == '1' ? 'selected' : '' }}>
-                                                                {{ __('Yes') }}</option>
-                                                            <option value="0"
-                                                                {{ old('maried') == '0' ? 'selected' : '' }}>
-                                                                {{ __('No') }}</option>
+                                                            <option value="single" {{ old('married_status') == 'single' ? 'selected' : '' }}>
+                                                                {{ __('Single') }}</option>
+                                                            <option value="married" {{ old('married_status') == 'married' ? 'selected' : '' }}>
+                                                                {{ __('Married') }}</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -447,7 +445,7 @@
                                             </div>
 
                                             <!-- Married Since & Religion -->
-                                            <div class="row">
+                                            <div class="row" id="marriedSinceRow" style="display:none;">
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
                                                         <label>{{ __('Married Since') }}</label>
@@ -483,7 +481,7 @@
                                                     <div class="form-group">
                                                         <label>{{ __('Work Permit') }}</label>
                                                         <select class="form-control form-control-solid form-control-lg"
-                                                            name="work_permit">
+                                                            name="work_permit" id="workPermit">
                                                             <option value=""></option>
                                                             <option value="L"
                                                                 {{ old('work_permit') == 'L' ? 'selected' : '' }}>L
@@ -500,6 +498,10 @@
                                                             <option value="CH"
                                                                 {{ old('work_permit') == 'CH' ? 'selected' : '' }}>CH
                                                             </option>
+                                                            <option value="registration_confirmation"
+                                                                {{ old('work_permit') == 'registration_confirmation' ? 'selected' : '' }}>
+                                                                {{ __('Registration Confirmation') }}
+                                                            </option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -507,7 +509,7 @@
 
                                             <!-- Work Permit Expiry (alone in last row, full-width or add another field if needed) -->
                                             <div class="row">
-                                                <div class="col-xl-6">
+                                                <div class="col-xl-6" id="workPermitExpiryRow">
                                                     <div class="form-group">
                                                         <label>{{ __('Work Permit Expiration Date') }}</label>
                                                         <input type="date"
@@ -896,10 +898,59 @@
 @endsection
 
 
+<script>
+(function(){
+  function toggleMarriedSince(){
+    var sel = document.getElementById('marriedStatus');
+    var row = document.getElementById('marriedSinceRow');
+    if(!sel || !row) return;
+    var v = sel.value || '';
+    row.style.display = (v === 'married') ? '' : 'none';
+  }
+  function toggleWorkPermitExpiry(){
+    var sel = document.getElementById('workPermit');
+    var row = document.getElementById('workPermitExpiryRow');
+    if(!sel || !row) return;
+    var v = (sel.value || '').toLowerCase();
+    row.style.display = (v && v !== 'registration_confirmation') ? '' : 'none';
+  }
+  document.addEventListener('change', function(e){
+    if(e.target && e.target.id === 'marriedStatus'){ toggleMarriedSince(); }
+    if(e.target && e.target.id === 'workPermit'){ toggleWorkPermitExpiry(); }
+  });
+  toggleMarriedSince();
+  toggleWorkPermitExpiry();
+})();
+</script>
+
 {{-- Scripts Section --}}
 @section('scripts')
     {{-- page scripts --}}
     <script src="{{ mix('js/pages/employees/create.js') }}" type="text/javascript"></script>
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+    (function(){
+      function toggleMarriedSince(){
+        var sel = document.getElementById('marriedStatus');
+        var row = document.getElementById('marriedSinceRow');
+        if(!sel || !row) return;
+        var v = sel.value || '';
+        row.style.display = (v === 'married') ? '' : 'none';
+      }
+      function toggleWorkPermitExpiry(){
+        var sel = document.getElementById('workPermit');
+        var row = document.getElementById('workPermitExpiryRow');
+        if(!sel || !row) return;
+        var v = (sel.value || '').toLowerCase();
+        row.style.display = (v && v !== 'registration_confirmation') ? '' : 'none';
+      }
+      document.addEventListener('change', function(e){
+        if(e.target && e.target.id === 'marriedStatus'){ toggleMarriedSince(); }
+        if(e.target && e.target.id === 'workPermit'){ toggleWorkPermitExpiry(); }
+      });
+      toggleMarriedSince();
+      toggleWorkPermitExpiry();
+    })();
+    </script>
 @endsection

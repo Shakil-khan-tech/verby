@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'plan_contracts_gating' => env('PLAN_CONTRACTS_GATING', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

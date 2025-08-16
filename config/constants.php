@@ -114,7 +114,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'functions' => [ 'Gouvernante', 'Raumpflegerinnen', 'Unterhalt', 'Stewarding', 'Zimmer Controle', 'Zimmer Reinigung','Annuliert'],
+    'functions' => [ 'Gouvernante', 'Raumpflegerinnen', 'Unterhalt', 'Stewarding', 'Zimmer Controle', 'Zimmer Reinigung','Annuliert', 'Assistant Housekeeper', 'Allrounder', 'Late Shift', 'Night Shift', 'Office'],
 
     /*
     |--------------------------------------------------------------------------

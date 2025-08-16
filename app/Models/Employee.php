@@ -204,8 +204,11 @@ class Employee extends Model implements HasMedia
 
     public function scopeWithAllContractsSigned($query)
     {
+        if (!config('app.plan_contracts_gating', env('PLAN_CONTRACTS_GATING', false))) {
+            return $query;
+        }
         return $query->where(function ($query) {
-            $query->where('employee_type', 0) // Old employees: always include
+            $query->where('employee_type', 0)
                 ->orWhere(function ($q) {
                     $q->where('employee_type', 1)
                         ->whereRaw('

@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -23,6 +24,11 @@ return [
     'Function' => 'Funktion',
     'Actions' => 'Aktionen',
     'edit_details' => 'Details bearbeiten',
+    'Married Status' => 'Familienstand',
+    'Single' => 'Ledig',
+    'Married' => 'Verheiratet',
+    'Registration Confirmation' => 'Anmeldebestätigung',
+
     'Delete' => 'Löschen',
     'confirmButton' => 'OK habe es!',
     'not_set' => 'nicht gesetzt',
@@ -68,6 +74,11 @@ return [
         'Cleaners' => 'Raumpflegerinnen',
         'Maintenance' => 'Unterhalt',
         'Stewarding' => 'Stewarding',
+        'assistant_housekeeper' => 'Assistent/in Hausdame',
+        'allrounder' => 'Allrounder/in',
+        'late_shift' => 'Spätschicht',
+        'night_shift' => 'Nachtschicht',
+        'office' => 'Büro',
     ],
     'validations' => [
         'name' => 'Name ist erforderlich',
